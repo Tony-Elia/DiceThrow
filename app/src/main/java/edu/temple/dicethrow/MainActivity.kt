@@ -18,6 +18,6 @@ class MainActivity : AppCompatActivity(), ButtonFragment.ButtonOnclickListener {
     }
 
     override fun onClick() {
-        (supportFragmentManager.findFragmentById(R.id.dieContainer) as DieFragment).throwDie()
+        (supportFragmentManager.findFragmentById(R.id.dieContainer) as? DieFragment)?.throwDie()
     }
 }
